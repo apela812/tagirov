@@ -24,7 +24,14 @@
               <small>им. М. К. Тагирова</small>
             </span>
           </a>
-          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Меню</button>
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="nav-toggle__label">Меню</span>
+            <span class="nav-toggle__icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
         </div>
         <nav class="nav-inline" id="primary-nav">
           <a class="nav-pill" href="#about">О лицее</a>
@@ -329,5 +336,20 @@
         </div>
       </footer>
     </div>
+    <button type="button" class="mobile-menu-backdrop" aria-label="Закрыть меню"></button>
+    <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu__head">
+        <strong>Навигация</strong>
+        <button type="button" class="mobile-menu__close" aria-label="Закрыть меню">Закрыть</button>
+      </div>
+      <nav class="mobile-menu__nav">
+        <a class="mobile-menu__link" href="#about">О лицее</a>
+        <a class="mobile-menu__link" href="#programs">Профили</a>
+        <a class="mobile-menu__link" href="#news">Новости</a>
+        <a class="mobile-menu__link" href="#admission">Поступление</a>
+        <a class="mobile-menu__link" href="#documents">Документы</a>
+        <a class="mobile-menu__link" href="#contacts">Контакты</a>
+      </nav>
+    </aside>
   </body>
 </html>
