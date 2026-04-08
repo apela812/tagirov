@@ -21,6 +21,12 @@ document.querySelectorAll('[data-scroll]').forEach((button) => {
   });
 });
 
+document.querySelectorAll('.form-grid').forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+  });
+});
+
 const scrollTopButton = document.querySelector('[data-scroll-top]');
 scrollTopButton?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });

@@ -18,7 +18,10 @@
           <span class="brand-chip__mark brand-chip__mark--logo">
             <img class="brand-chip__logo" src="./logo-school.png" alt="Логотип Лицея №1 имени М. К. Тагирова" />
           </span>
-          <span>Лицей №1 им. М. К. Тагирова</span>
+          <span class="brand-chip__name">
+            <strong>Лицей №1</strong>
+            <small>им. М. К. Тагирова</small>
+          </span>
         </a>
         <nav class="nav-inline">
           <a class="nav-pill" href="#about">О лицее</a>
@@ -35,14 +38,14 @@
           <div class="hero-grid">
             <div class="hero-copy reveal">
               <span class="eyebrow">Официальный сайт</span>
-              <h1 class="home-hero-title" style="font-family: 'Space Grotesk', sans-serif">Лицей №1 имени М. К. Тагирова</h1>
+              <h1 class="home-hero-title">Лицей №1 имени М. К. Тагирова</h1>
               <p class="home-hero-subtitle">
                 Современная образовательная среда с углубленным изучением предметов,
                 проектной деятельностью и системной подготовкой к олимпиадам и поступлению в ведущие вузы.
               </p>
               <div class="cta-row home-hero-cta">
-                <button class="button button--solid" data-scroll="#admission">Подать заявку</button>
-                <button class="button button--ghost" data-scroll="#programs">Смотреть профили</button>
+                <button type="button" class="button button--solid" data-scroll="#admission">Подать заявку</button>
+                <button type="button" class="button button--ghost" data-scroll="#programs">Смотреть профили</button>
               </div>
             </div>
 
@@ -83,20 +86,34 @@
               </article>
             </div>
             <article class="glass-card photo-note reveal">
-              <h3 style="margin-top: 0">Комфортная среда</h3>
+              <h3 class="photo-note__title">Комфортная среда</h3>
               <p>Лицей располагает современной инфраструктурой, благоустроенной территорией и безопасными учебными пространствами.</p>
             </article>
           </div>
         </section>
 
         <section class="section" id="about">
-          <div class="section-head reveal">
-            <span class="eyebrow">О лицее</span>
-            <h2>Школа, где академическая база сочетается с развитием личности</h2>
-            <p>
-              Лицей №1 имени М. К. Тагирова создает образовательную среду, в которой ученики
-              получают сильную предметную подготовку, учатся работать в проектах и осознанно выбирают траекторию будущего.
-            </p>
+          <div class="about-intro">
+            <div class="section-head section-head--about reveal">
+              <span class="eyebrow">О лицее</span>
+              <h2>Школа, где академическая база сочетается с развитием личности</h2>
+              <p>
+                Лицей №1 имени М. К. Тагирова создает образовательную среду, в которой ученики
+                получают сильную предметную подготовку, учатся работать в проектах и осознанно выбирают траекторию будущего.
+              </p>
+            </div>
+            <div class="glass-card about-highlight reveal">
+              <div class="about-highlight__photo">
+                <img src="./images/lyceum-campus-thumb.png" alt="Учебная среда и территория лицея" />
+              </div>
+              <div class="about-highlight__chips">
+                <span>Проектные лаборатории</span>
+                <span>Олимпиадные треки</span>
+                <span>Клубы и секции</span>
+                <span>Безопасная среда</span>
+              </div>
+              <p class="about-highlight__note">Учеба, практика и школьная жизнь в одном ритме.</p>
+            </div>
           </div>
           <div class="card-grid">
             <article class="glass-card reveal">
@@ -112,10 +129,10 @@
               <p>Системная работа над предметами и индивидуальная поддержка старшеклассников.</p>
             </article>
           </div>
-          <div class="glass-grid" style="margin-top: 1.2rem">
+          <div class="glass-grid glass-grid--offset">
             <article class="glass-card reveal">
               <span class="eyebrow">Визитная карточка</span>
-              <ul class="list-clean" style="margin-top: 1rem">
+              <ul class="list-clean list-clean--spaced">
                 <li><span>Короткое название</span><span>ГАОУ "Лицей №1 им. М. К. Тагирова"</span></li>
                 <li><span>Адрес</span><span>423462, РТ, Альметьевский р-н, г. Альметьевск, ул. Тагирова, д. 33</span></li>
                 <li><span>Руководитель</span><span>Шакиров Рустам Мансурович</span></li>
@@ -125,7 +142,7 @@
             </article>
             <article class="glass-card reveal">
               <span class="eyebrow">Контингент</span>
-              <ul class="list-clean" style="margin-top: 1rem">
+              <ul class="list-clean list-clean--spaced">
                 <li><span>У нас учатся</span><span>1007 учеников</span></li>
                 <li><span>Иностранные граждане</span><span>2</span></li>
                 <li><span>Форма обучения</span><span>Очная</span></li>
@@ -146,7 +163,7 @@
         </section>
 
         <section class="dashboard-shell" id="programs">
-          <aside class="dashboard-sidebar reveal">
+          <aside class="dashboard-sidebar reveal" aria-label="Профили обучения">
             <div class="glass-badge">Профили обучения</div>
             <div class="glass-card">
               <strong>Как выбрать профиль</strong>
@@ -205,7 +222,7 @@
           <div class="glass-grid">
             <article class="glass-card reveal">
               <span class="eyebrow">Расписание приема</span>
-              <ul class="list-clean" style="margin-top: 1rem">
+              <ul class="list-clean list-clean--spaced">
                 <li><span>Понедельник</span><span>09:00 - 17:00</span></li>
                 <li><span>Вторник</span><span>09:00 - 17:00</span></li>
                 <li><span>Среда</span><span>09:00 - 17:00</span></li>
@@ -215,7 +232,7 @@
             </article>
             <article class="glass-card reveal" id="documents">
               <span class="eyebrow">Документы</span>
-              <ul class="list-clean" style="margin-top: 1rem">
+              <ul class="list-clean list-clean--spaced">
                 <li><span>Устав лицея</span><span>PDF</span></li>
                 <li><span>Правила приема</span><span>PDF</span></li>
                 <li><span>Образовательная программа</span><span>PDF</span></li>
@@ -269,7 +286,7 @@
                 <textarea rows="4" placeholder="Удобное время для звонка, вопросы, пожелания"></textarea>
               </label>
               <div class="field--full">
-                <button type="button" class="button button--solid">Отправить заявку</button>
+                <button type="submit" class="button button--solid">Отправить заявку</button>
               </div>
             </form>
           </div>
@@ -279,7 +296,7 @@
           <div class="glass-grid">
             <article class="glass-card reveal">
               <span class="eyebrow">Частые вопросы</span>
-              <ul class="list-clean" style="margin-top: 1rem">
+              <ul class="list-clean list-clean--spaced">
                 <li><span>Какие документы нужны?</span><span>Паспорт, свидетельство, личное дело</span></li>
                 <li><span>Есть ли подготовка к экзаменам?</span><span>Да, по профильным дисциплинам</span></li>
                 <li><span>Можно ли перевестись в середине года?</span><span>Да, при наличии мест</span></li>
