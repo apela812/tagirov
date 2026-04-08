@@ -1014,7 +1014,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 }
 
 .collection-card--glass::before {
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.78), transparent 62%);
+  background: radial-gradient(circle, rgba(0, 96, 204, 0.78), transparent 62%);
 }
 
 .collection-card--glass .collection-card__shape {
@@ -1087,7 +1087,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 
 .collection-card--bento .collection-card__shape {
   border-radius: 36px;
-  background: linear-gradient(135deg, #ff7e58 0%, #ffd35a 52%, #36c4ff 100%);
+  background: linear-gradient(135deg, #ff7e58 0%, #ffd35a 52%, #0060cc 100%);
 }
 
 .collection-card--swiss::before {
@@ -1145,7 +1145,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
   border: 2px solid rgba(17, 17, 17, 0.26);
   image-rendering: pixelated;
   background:
-    linear-gradient(90deg, #00d4ff 50%, #ff4b6e 50%) 0 0 / 18px 18px,
+    linear-gradient(90deg, #0060cc 50%, #ff4b6e 50%) 0 0 / 18px 18px,
     linear-gradient(180deg, #ffe75a 50%, #0d1017 50%) 0 0 / 18px 18px;
 }
 
@@ -1168,7 +1168,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 .collection-card--scrap .collection-card__shape {
   transform: rotate(9deg);
   border-radius: 12px;
-  background: linear-gradient(135deg, #f8d7a4 0%, #ff8f7d 50%, #8fc6ff 100%);
+  background: linear-gradient(135deg, #f8d7a4 0%, #ff8f7d 50%, #0060cc 100%);
 }
 
 .collection-card--atlas::before {
@@ -1214,20 +1214,20 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 .collection-card--isotope .collection-card__shape {
   border-radius: 24px;
   background:
-    conic-gradient(from 0deg, #f43f5e, #fb923c, #facc15, #4ade80, #38bdf8, #f43f5e);
+    conic-gradient(from 0deg, #f43f5e, #fb923c, #facc15, #4ade80, #0060cc, #f43f5e);
 }
 
 .orbit-theme {
   --page-bg: #07131d;
   --paper: rgba(10, 26, 42, 0.82);
-  --text: #eef7ff;
+  --text: #0060cc;
   --muted: rgba(227, 242, 253, 0.7);
-  --border: rgba(148, 210, 255, 0.2);
+  --border: rgba(0, 96, 204, 0.2);
   --accent: #00d0a2;
   --shadow: 0 26px 90px rgba(0, 0, 0, 0.38);
   background:
     radial-gradient(circle at top left, rgba(0, 208, 162, 0.22), transparent 28%),
-    radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.16), transparent 24%),
+    radial-gradient(circle at 85% 15%, rgba(0, 96, 204, 0.16), transparent 24%),
     linear-gradient(160deg, #07131d 0%, #091b2d 36%, #02060d 100%);
 }
 
@@ -1240,7 +1240,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 
 .orbit-theme .brand-chip__mark,
 .orbit-theme .button--solid {
-  background: linear-gradient(135deg, #00d0a2, #0ea5e9);
+  background: linear-gradient(135deg, #00d0a2, #0060cc);
   color: #03131d;
 }
 
@@ -1291,7 +1291,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 .orbit-card-primary {
   inset: 1.2rem 0 7rem 6rem;
   background:
-    linear-gradient(180deg, rgba(14, 165, 233, 0.12), rgba(2, 6, 23, 0.95)),
+    linear-gradient(180deg, rgba(0, 96, 204, 0.12), rgba(2, 6, 23, 0.95)),
     radial-gradient(circle at top left, rgba(0, 208, 162, 0.35), transparent 28%);
 }
 
@@ -1417,7 +1417,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 
 .glass-theme .brand-chip__mark,
 .glass-theme .button--solid {
-  background: linear-gradient(135deg, #0060cc, #004f57);
+  background: linear-gradient(135deg, #0060cc, #0060cc);
 }
 
 .glass-theme h1,
@@ -2477,7 +2477,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
   --shadow: 0 24px 70px rgba(44, 27, 54, 0.14);
   background:
     radial-gradient(circle at 10% 10%, rgba(255, 126, 88, 0.26), transparent 22%),
-    radial-gradient(circle at 88% 10%, rgba(54, 196, 255, 0.24), transparent 24%),
+    radial-gradient(circle at 88% 10%, rgba(0, 96, 204, 0.24), transparent 24%),
     linear-gradient(180deg, #fff2e6 0%, #ffeedd 100%);
 }
 
@@ -2494,7 +2494,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 
 .bento-theme .brand-chip__mark,
 .bento-theme .button--solid {
-  background: linear-gradient(135deg, #ff7e58, #36c4ff);
+  background: linear-gradient(135deg, #ff7e58, #0060cc);
 }
 
 .bento-ribbon {
@@ -2542,7 +2542,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 }
 
 .bento-tile--accent {
-  background: linear-gradient(135deg, #ff7e58 0%, #ffd35a 52%, #36c4ff 100%);
+  background: linear-gradient(135deg, #ff7e58 0%, #ffd35a 52%, #0060cc 100%);
   color: #1d1226;
 }
 
@@ -2852,14 +2852,14 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 .blueprint-theme {
   --page-bg: #09182f;
   --paper: rgba(12, 33, 62, 0.86);
-  --text: #dceaff;
-  --muted: rgba(220, 234, 255, 0.72);
-  --border: rgba(108, 171, 255, 0.26);
+  --text: #0060cc;
+  --muted: rgba(0, 96, 204, 0.72);
+  --border: rgba(0, 96, 204, 0.26);
   --accent: #0060cc;
   --shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
   background:
-    linear-gradient(90deg, rgba(108, 171, 255, 0.08) 1px, transparent 1px) 0 0 / 24px 24px,
-    linear-gradient(180deg, rgba(108, 171, 255, 0.08) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, rgba(0, 96, 204, 0.08) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(180deg, rgba(0, 96, 204, 0.08) 1px, transparent 1px) 0 0 / 24px 24px,
     linear-gradient(160deg, #09182f 0%, #081326 55%, #050b16 100%);
 }
 
@@ -2895,8 +2895,8 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 .blueprint-panel--grid {
   min-height: 290px;
   background:
-    linear-gradient(90deg, rgba(108, 171, 255, 0.14) 1px, transparent 1px) 0 0 / 18px 18px,
-    linear-gradient(180deg, rgba(108, 171, 255, 0.14) 1px, transparent 1px) 0 0 / 18px 18px,
+    linear-gradient(90deg, rgba(0, 96, 204, 0.14) 1px, transparent 1px) 0 0 / 18px 18px,
+    linear-gradient(180deg, rgba(0, 96, 204, 0.14) 1px, transparent 1px) 0 0 / 18px 18px,
     rgba(12, 33, 62, 0.78);
 }
 
@@ -2960,7 +2960,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
   min-height: 320px;
   padding: 1.2rem;
   background:
-    linear-gradient(90deg, rgba(0, 212, 255, 0.18) 1px, transparent 1px) 0 0 / 14px 14px,
+    linear-gradient(90deg, rgba(0, 96, 204, 0.18) 1px, transparent 1px) 0 0 / 14px 14px,
     linear-gradient(180deg, rgba(255, 75, 110, 0.18) 1px, transparent 1px) 0 0 / 14px 14px,
     rgba(31, 25, 48, 0.92);
 }
@@ -3111,7 +3111,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 .atlas-theme {
   --page-bg: #03272a;
   --paper: rgba(5, 47, 45, 0.88);
-  --text: #ddfffb;
+  --text: #0060cc;
   --muted: rgba(221, 255, 251, 0.72);
   --border: rgba(45, 212, 191, 0.24);
   --accent: #2dd4bf;
@@ -3228,9 +3228,9 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
 .lab-theme {
   --page-bg: #0b1220;
   --paper: rgba(13, 22, 39, 0.9);
-  --text: #e5edff;
-  --muted: rgba(229, 237, 255, 0.72);
-  --border: rgba(98, 169, 255, 0.24);
+  --text: #0060cc;
+  --muted: rgba(0, 96, 204, 0.72);
+  --border: rgba(0, 96, 204, 0.24);
   --accent: #0060cc;
   --shadow: 0 28px 88px rgba(0, 0, 0, 0.45);
   background:
@@ -3290,7 +3290,7 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
   --shadow: 0 24px 80px rgba(45, 28, 36, 0.12);
   background:
     radial-gradient(circle at 15% 8%, rgba(244, 63, 94, 0.2), transparent 24%),
-    radial-gradient(circle at 82% 18%, rgba(56, 189, 248, 0.16), transparent 24%),
+    radial-gradient(circle at 82% 18%, rgba(0, 96, 204, 0.16), transparent 24%),
     linear-gradient(180deg, #fff8fa 0%, #fff1f5 100%);
 }
 
