@@ -3545,9 +3545,22 @@ main {
     font-size: clamp(2.8rem, 12vw, 4.6rem);
   }
 
+  .home-hero .hero-copy {
+    display: grid;
+    gap: 0.78rem;
+  }
+
+  .home-hero .hero-copy .eyebrow {
+    justify-self: start;
+    width: fit-content;
+  }
+
   .home-hero-title {
     font-size: clamp(2.2rem, 10.5vw, 3.6rem) !important;
     max-width: 15ch;
+    line-height: 1.05 !important;
+    letter-spacing: -0.03em !important;
+    margin: 0;
   }
 
   .section-head--gallery h2 {
@@ -3562,7 +3575,12 @@ main {
   .home-hero-subtitle {
     font-size: 1rem;
     max-width: none;
-    line-height: 1.55;
+    line-height: 1.62;
+    margin: 0;
+  }
+
+  .home-hero-cta {
+    margin-top: 0.3rem;
   }
 
   .brand-chip__name small {
@@ -3769,6 +3787,7 @@ main {
 
   .home-hero-title {
     font-size: clamp(1.95rem, 11.2vw, 2.4rem) !important;
+    line-height: 1.07 !important;
   }
 
   .eyebrow {
