@@ -3693,7 +3693,8 @@ body.nav-closing .nav-toggle__icon span:nth-child(3) {
   }
 
   .site-header {
-    position: relative;
+    position: sticky;
+    top: 0.35rem;
     flex-direction: column;
     border-radius: 24px;
     margin-top: 0.6rem;
