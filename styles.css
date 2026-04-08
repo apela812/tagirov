@@ -3442,10 +3442,20 @@ main {
 }
 
 @media (max-width: 760px) {
+  .site-header,
+  .hero,
+  .section,
+  .footer,
+  .dashboard-shell {
+    width: min(1180px, calc(100% - 1rem));
+  }
+
   .site-header {
     position: relative;
     flex-direction: column;
     border-radius: 24px;
+    margin-top: 0.6rem;
+    padding: 0.7rem;
   }
 
   .home-header .nav-inline {
@@ -3473,7 +3483,11 @@ main {
 
   .collection-intro,
   .hero {
-    padding-top: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .section {
+    padding: 1rem 0 2.2rem;
   }
 
   .hero-copy h1,
@@ -3490,8 +3504,15 @@ main {
     font-size: clamp(1.9rem, 8vw, 2.8rem);
   }
 
+  .section-head h2 {
+    font-size: clamp(1.85rem, 8.8vw, 2.7rem);
+    line-height: 1.02;
+  }
+
   .home-hero-subtitle {
     font-size: 1rem;
+    max-width: none;
+    line-height: 1.55;
   }
 
   .brand-chip__name small {
@@ -3506,7 +3527,7 @@ main {
   .paper-frame,
   .speed-board,
   .heritage-frame {
-    min-height: 440px;
+    min-height: 360px;
   }
 
   .orbit-card-primary {
@@ -3576,6 +3597,22 @@ main {
 
   .form-grid {
     grid-template-columns: 1fr;
+  }
+
+  .list-clean li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.32rem;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    font-size: 16px;
+  }
+
+  .field--full .button {
+    width: 100%;
   }
 
   .poster-card--wide,
@@ -3653,5 +3690,29 @@ main {
     right: 0.75rem;
     bottom: 0.75rem;
     padding: 0.68rem 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero-title {
+    font-size: clamp(1.95rem, 11.2vw, 2.4rem) !important;
+  }
+
+  .eyebrow {
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    padding: 0.46rem 0.72rem;
+  }
+
+  .home-hero .hero-art {
+    min-height: 320px;
+  }
+
+  .photo-card img {
+    min-height: 200px;
+  }
+
+  .photo-card--main img {
+    min-height: 240px;
   }
 }
