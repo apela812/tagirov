@@ -14,16 +14,19 @@
   <body class="glass-theme">
     <div class="page-shell">
       <header class="site-header home-header">
-        <a class="brand-chip" href="./index.html">
-          <span class="brand-chip__mark brand-chip__mark--logo">
-            <img class="brand-chip__logo" src="./logo-school.png" alt="Логотип Лицея №1 имени М. К. Тагирова" />
-          </span>
-          <span class="brand-chip__name">
-            <strong>Лицей №1</strong>
-            <small>им. М. К. Тагирова</small>
-          </span>
-        </a>
-        <nav class="nav-inline">
+        <div class="home-header__top">
+          <a class="brand-chip" href="./index.html">
+            <span class="brand-chip__mark brand-chip__mark--logo">
+              <img class="brand-chip__logo" src="./logo-school.png" alt="Логотип Лицея №1 имени М. К. Тагирова" />
+            </span>
+            <span class="brand-chip__name">
+              <strong>Лицей №1</strong>
+              <small>им. М. К. Тагирова</small>
+            </span>
+          </a>
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Меню</button>
+        </div>
+        <nav class="nav-inline" id="primary-nav">
           <a class="nav-pill" href="#about">О лицее</a>
           <a class="nav-pill" href="#programs">Профили</a>
           <a class="nav-pill" href="#news">Новости</a>

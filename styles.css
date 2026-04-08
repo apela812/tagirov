@@ -32,7 +32,7 @@ h1,
 h2,
 h3,
 p {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -417,9 +417,31 @@ main {
   padding: 0.75rem 1rem;
 }
 
+.home-header__top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
 .home-header .brand-chip {
   min-width: max-content;
   font-size: 1rem;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.58rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.64);
 }
 
 .home-header .nav-inline {
@@ -3428,6 +3450,11 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .home-hero .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
   .section-head--gallery h2 {
     max-width: none;
   }
@@ -3458,27 +3485,50 @@ main {
     padding: 0.7rem;
   }
 
-  .home-header .nav-inline {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+  .home-header__top {
     width: 100%;
-    overflow-x: auto;
+    justify-content: space-between;
+  }
+
+  .home-header .brand-chip {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .home-header .brand-chip__name {
+    min-width: 0;
+  }
+
+  .home-header .brand-chip__name strong,
+  .home-header .brand-chip__name small {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .home-header.nav-ready .nav-inline {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.45rem;
+    overflow: visible;
+    padding-top: 0.2rem;
+  }
+
+  .site-header.nav-ready.nav-open .nav-inline {
+    display: flex;
   }
 
   .home-header .nav-pill {
-    width: auto;
-    flex: 0 0 auto;
-  }
-
-  .site-header--flat .nav-inline {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .site-header--flat .nav-pill,
-  .site-header--flat .button {
-    width: auto;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0.7rem 0.92rem;
   }
 
   .collection-intro,
@@ -3497,7 +3547,7 @@ main {
 
   .home-hero-title {
     font-size: clamp(2.2rem, 10.5vw, 3.6rem) !important;
-    max-width: none;
+    max-width: 15ch;
   }
 
   .section-head--gallery h2 {
@@ -3694,6 +3744,29 @@ main {
 }
 
 @media (max-width: 480px) {
+  .site-header,
+  .hero,
+  .section,
+  .footer,
+  .dashboard-shell {
+    width: calc(100% - 0.7rem);
+  }
+
+  .nav-toggle {
+    padding: 0.5rem 0.76rem;
+    font-size: 0.74rem;
+  }
+
+  .brand-chip__mark--logo {
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 14px;
+  }
+
+  .home-header .brand-chip__name small {
+    display: none;
+  }
+
   .home-hero-title {
     font-size: clamp(1.95rem, 11.2vw, 2.4rem) !important;
   }
