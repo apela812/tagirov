@@ -19,7 +19,9 @@ const navLinks = document.querySelectorAll('.mobile-menu__link');
 const navBackdrop = document.querySelector('.mobile-menu-backdrop');
 const mobileMenu = document.querySelector('.mobile-menu');
 const mobileMenuClose = document.querySelector('.mobile-menu__close');
+const scrollTopButton = document.querySelector('[data-scroll-top]');
 const MOBILE_NAV_CLOSE_ANIMATION_MS = 420;
+const SCROLL_TOP_SHOW_OFFSET = 240;
 let mobileNavCloseTimer = null;
 const SCROLL_BASE_DURATION_MS = 950;
 
@@ -55,6 +57,13 @@ const smoothScrollToY = (destinationY) => {
   };
 
   window.requestAnimationFrame(step);
+};
+
+const updateScrollTopVisibility = () => {
+  if (!scrollTopButton) {
+    return;
+  }
+  scrollTopButton.classList.toggle('is-visible', window.scrollY > SCROLL_TOP_SHOW_OFFSET);
 };
 
 document.body.classList.remove('nav-open');
@@ -141,6 +150,7 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('pageshow', () => {
   closeMobileNav(false);
+  updateScrollTopVisibility();
 });
 
 window.addEventListener('keydown', (event) => {
@@ -166,10 +176,27 @@ document.querySelectorAll('.form-grid').forEach((form) => {
   });
 });
 
-const scrollTopButton = document.querySelector('[data-scroll-top]');
 scrollTopButton?.addEventListener('click', () => {
   smoothScrollToY(0);
 });
+
+let isScrollTopTicking = false;
+window.addEventListener(
+  'scroll',
+  () => {
+    if (isScrollTopTicking) {
+      return;
+    }
+    isScrollTopTicking = true;
+    window.requestAnimationFrame(() => {
+      updateScrollTopVisibility();
+      isScrollTopTicking = false;
+    });
+  },
+  { passive: true }
+);
+
+updateScrollTopVisibility();
 
 const currentYear = new Date().getFullYear();
 document.querySelectorAll('[data-year]').forEach((node) => {
