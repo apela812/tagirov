@@ -259,41 +259,65 @@
             <p>Заполните форму, и приемная комиссия свяжется с вами в рабочее время.</p>
           </div>
           <div class="glass-card reveal">
-            <form class="form-grid">
+            <form class="form-grid" id="admission-form" novalidate>
               <label class="field">
                 <span>ФИО родителя</span>
-                <input type="text" placeholder="Введите ФИО" />
+                <input
+                  type="text"
+                  name="parent_name"
+                  placeholder="Введите ФИО"
+                  autocomplete="name"
+                  minlength="2"
+                  pattern="[A-Za-zА-Яа-яЁё\s-]{2,80}"
+                  maxlength="80"
+                  required
+                />
               </label>
               <label class="field">
                 <span>Телефон</span>
-                <input type="tel" placeholder="+7 (___) ___-__-__" />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+7 (___) ___-__-__"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
+                  maxlength="18"
+                  required
+                />
               </label>
               <label class="field">
                 <span>Класс поступления</span>
-                <select>
-                  <option>1 класс</option>
-                  <option>2 класс</option>
-                  <option>3 класс</option>
-                  <option>4 класс</option>
-                  <option>5 класс</option>
-                  <option>6 класс</option>
-                  <option>7 класс</option>
-                  <option>8 класс</option>
-                  <option>9 класс</option>
-                  <option>10 класс</option>
-                  <option>11 класс</option>
+                <select name="grade" required>
+                  <option value="1">1 класс</option>
+                  <option value="2">2 класс</option>
+                  <option value="3">3 класс</option>
+                  <option value="4">4 класс</option>
+                  <option value="5">5 класс</option>
+                  <option value="6">6 класс</option>
+                  <option value="7">7 класс</option>
+                  <option value="8">8 класс</option>
+                  <option value="9">9 класс</option>
+                  <option value="10">10 класс</option>
+                  <option value="11">11 класс</option>
                 </select>
               </label>
               <label class="field">
                 <span>Профиль</span>
-                <select>
-                  <option>Физмат</option>
-                  <option>Хим-био</option>
+                <select name="profile" disabled>
+                  <option value="none" selected>Не требуется (1–6 класс)</option>
+                  <option value="phyzmat">Физмат</option>
+                  <option value="chem-bio">Хим-био</option>
                 </select>
               </label>
               <label class="field field--full">
                 <span>Комментарий</span>
-                <textarea rows="4" placeholder="Удобное время для звонка, вопросы, пожелания"></textarea>
+                <textarea
+                  rows="4"
+                  name="comment"
+                  placeholder="Удобное время для звонка, вопросы, пожелания"
+                  maxlength="400"
+                ></textarea>
               </label>
               <div class="field--full">
                 <button type="submit" class="button button--solid">Отправить заявку</button>
