@@ -175,6 +175,7 @@ const parentNameInput = admissionForm?.querySelector('input[name="parent_name"]'
 const phoneInput = admissionForm?.querySelector('input[name="phone"]');
 const gradeSelect = admissionForm?.querySelector('select[name="grade"]');
 const profileSelect = admissionForm?.querySelector('select[name="profile"]');
+const profileField = admissionForm?.querySelector('[data-profile-field]');
 const commentInput = admissionForm?.querySelector('textarea[name="comment"]');
 const PROFILE_MIN_GRADE = 7;
 
@@ -259,6 +260,9 @@ const syncProfileByGrade = () => {
   }
   const grade = Number.parseInt(gradeSelect.value, 10);
   if (Number.isNaN(grade)) {
+    if (profileField) {
+      profileField.hidden = true;
+    }
     profileSelect.disabled = true;
     profileSelect.required = false;
     profileSelect.value = 'none';
@@ -267,6 +271,9 @@ const syncProfileByGrade = () => {
   }
 
   const shouldEnableProfile = grade >= PROFILE_MIN_GRADE;
+  if (profileField) {
+    profileField.hidden = !shouldEnableProfile;
+  }
   profileSelect.disabled = !shouldEnableProfile;
   profileSelect.required = shouldEnableProfile;
 
