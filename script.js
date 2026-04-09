@@ -19,8 +19,43 @@ const navLinks = document.querySelectorAll('.mobile-menu__link');
 const navBackdrop = document.querySelector('.mobile-menu-backdrop');
 const mobileMenu = document.querySelector('.mobile-menu');
 const mobileMenuClose = document.querySelector('.mobile-menu__close');
-const MOBILE_NAV_CLOSE_ANIMATION_MS = 260;
+const MOBILE_NAV_CLOSE_ANIMATION_MS = 420;
 let mobileNavCloseTimer = null;
+const SCROLL_BASE_DURATION_MS = 950;
+
+const easeInOutCubic = (value) => {
+  if (value < 0.5) {
+    return 4 * value * value * value;
+  }
+  return 1 - Math.pow(-2 * value + 2, 3) / 2;
+};
+
+const smoothScrollToY = (destinationY) => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.scrollTo(0, destinationY);
+    return;
+  }
+
+  const startY = window.scrollY;
+  const distance = destinationY - startY;
+  if (Math.abs(distance) < 2) {
+    return;
+  }
+
+  const duration = Math.min(1450, Math.max(550, SCROLL_BASE_DURATION_MS + Math.abs(distance) * 0.16));
+  const startTime = performance.now();
+
+  const step = (timestamp) => {
+    const progress = Math.min(1, (timestamp - startTime) / duration);
+    const easedProgress = easeInOutCubic(progress);
+    window.scrollTo(0, Math.round(startY + distance * easedProgress));
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+
+  window.requestAnimationFrame(step);
+};
 
 document.body.classList.remove('nav-open');
 document.body.classList.remove('nav-closing');
@@ -117,7 +152,11 @@ window.addEventListener('keydown', (event) => {
 document.querySelectorAll('[data-scroll]').forEach((button) => {
   button.addEventListener('click', () => {
     const target = document.querySelector(button.getAttribute('data-scroll'));
-    target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!target) {
+      return;
+    }
+    const destinationY = target.getBoundingClientRect().top + window.scrollY - 12;
+    smoothScrollToY(destinationY);
   });
 });
 
@@ -129,7 +168,7 @@ document.querySelectorAll('.form-grid').forEach((form) => {
 
 const scrollTopButton = document.querySelector('[data-scroll-top]');
 scrollTopButton?.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  smoothScrollToY(0);
 });
 
 const currentYear = new Date().getFullYear();
